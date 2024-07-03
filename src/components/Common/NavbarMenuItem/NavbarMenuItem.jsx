@@ -10,7 +10,7 @@ const NavbarMenuItem = ({text}) => {
         viewBox="0 0 24 24"
         strokeWidth={0.5}
         stroke="currentColor"
-        className="size-1"
+        className="navbar__itemSVG"
       >
         <path
           strokeLinecap="round"

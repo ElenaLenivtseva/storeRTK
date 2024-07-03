@@ -1,3 +1,38 @@
+@import '../../../stylesCommon/_variables';
+@import '../../../stylesCommon/_mixins';
+@import '../../../stylesCommon/_common';
+
 .navbar {
-    
+    &__top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $black;
+        color: $white;
+        padding: 1rem 0;
+        font-size: 1.6rem;
+    }
+    &__bottom {
+        background: $white;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        
+    }
+    &__menu {
+        display: flex;
+    }
+    &__menuItem {
+        display: flex;
+    }
+    &__itemSVG {
+
+    }
+    &__actionsWrap {
+
+    }
+    &__actionImg {
+
+    }
 }
