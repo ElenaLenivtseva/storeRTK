@@ -1,0 +1,26 @@
+.topCollection {
+    position: relative;
+    height: 80vh;
+
+    &__imgWrap {
+        width: 100%;
+        height: 80vh;
+        overflow: hidden;
+    }
+
+    &__bg {
+        min-width: 100%;
+        object-fit: cover;
+    }
+
+    &__info {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-40%);
+        left: 50%;
+        transform: translateX(-50%);
+}
+    &__title {
+        margin-bottom: 0.5em;
+    }
+}
