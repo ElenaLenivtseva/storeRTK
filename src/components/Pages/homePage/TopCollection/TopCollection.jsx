@@ -4,7 +4,7 @@ import "./TopCollection.scss";
 
 const TopCollection = () => {
   return (
-    <div className="topCollection">
+    <section className="section topCollection">
       <div className="topCollection__imgWrap">
         <img
           className="topCollection__bg"
@@ -13,10 +13,10 @@ const TopCollection = () => {
         />
       </div>
       <div className="topCollection__info">
-        <p className="title topCollection__title">Fall Spring 24</p>
+        <h3 className="title topCollection__title">Fall Spring 24</h3>
         <Button>Discover New Collection</Button>
       </div>
-    </div>
+    </section>
   );
 };
 

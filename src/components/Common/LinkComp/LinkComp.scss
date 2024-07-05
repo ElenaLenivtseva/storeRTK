@@ -1,0 +1,8 @@
+@import '../../../stylesCommon/_common';
+
+.link {
+    border-bottom: 0.5px solid $black;
+    cursor: pointer;
+    font-weight: lighter;
+    color: $black;
+}

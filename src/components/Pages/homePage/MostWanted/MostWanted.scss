@@ -1,0 +1,20 @@
+@import '../../../../stylesCommon/_common';
+
+.mostWanted {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.5rem;
+    }
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .productCard__info {
+        display: flex;
+        justify-content: space-around;
+        color: $black;
+    }
+}
