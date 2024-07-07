@@ -11,4 +11,16 @@
         color: $black;
         cursor: pointer;
     }
+    &_black {
+        border: 0.5px solid $black;
+        color: $black;
+        &:hover {
+            background: $black;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+    &_sm {
+        width: 30%;
+    }
 }

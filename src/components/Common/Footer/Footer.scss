@@ -1,0 +1,16 @@
+@import '../../../stylesCommon/_common';
+
+.footer {
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $black;
+        color: $white;
+        padding: 2rem 5%;
+    }
+    &__contactLink {
+        color: $white;
+        cursor: pointer;
+    }
+}
