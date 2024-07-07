@@ -1,7 +1,8 @@
 import React from "react";
 import LinkComp from "../../../Common/LinkComp/LinkComp";
-import "./MostWanted.scss";
 import ProductCard from "../../../Common/ProductCard/ProductCard";
+import "./MostWanted.scss";
+
 
 const initialMostWantedProducts = [
   {

@@ -28,4 +28,9 @@
         width: 1rem;
         height: 1rem;
     }
+    &__info {
+        display: flex;
+        justify-content: space-around;
+        color: $black;
+    }
 }

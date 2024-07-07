@@ -32,7 +32,7 @@ const ShopByCategory = () => {
           return <CategoryCard key={categ.id} info={categ} />;
         })}
       </div>
-      <LinkComp>Discover the Full Collection</LinkComp>
+      <LinkComp>Discover All Categories</LinkComp>
     </section>
   );
 };
