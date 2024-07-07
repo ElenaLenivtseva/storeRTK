@@ -1,0 +1,19 @@
+@import '../../../../stylesCommon/common.scss';
+
+.shopByCategory {
+    text-align: center;
+    &__header {
+        color: $black;
+        margin: 2rem;
+    }
+    &__lead {
+        padding: 1rem 25%;
+    }
+    &__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        margin-bottom: 2rem;
+    }
+}

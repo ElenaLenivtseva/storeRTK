@@ -28,15 +28,17 @@ const initialMostWantedProducts = [
 ];
 const MostWanted = () => {
   return (
-    <section className="section section_base mostWanted">
-      <div className="mostWanted__header">
-        <h3 className="subtitle mostWanted__title">Most Wanted</h3>
-        <LinkComp>Discover the Full Collection</LinkComp>
-      </div>
-      <div className="mostWanted__body">
-        {initialMostWantedProducts.map((product) => {
-          return <ProductCard key={product.id} info={product} />;
-        })}
+    <section className="mostWanted">
+      <div className="wrap">
+        <div className="mostWanted__header">
+          <h3 className="subtitle mostWanted__title">Most Wanted</h3>
+          <LinkComp>Discover the Full Collection</LinkComp>
+        </div>
+        <div className="mostWanted__body">
+          {initialMostWantedProducts.map((product) => {
+            return <ProductCard key={product.id} info={product} />;
+          })}
+        </div>
       </div>
     </section>
   );

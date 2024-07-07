@@ -1,11 +1,11 @@
 import React from 'react'
 import './LinkComp.scss'
 
-const Link = ({children}) => {
+const LinkComp = ({children}) => {
   return (
     // пока a, потом будет Link
     <a className='link' href="#">{children}</a>
   )
 }
 
-export default Link
+export default LinkComp

@@ -4,7 +4,7 @@ import "./TopCollection.scss";
 
 const TopCollection = () => {
   return (
-    <section className="section topCollection">
+    <section className="topCollection">
       <div className="topCollection__imgWrap">
         <img
           className="topCollection__bg"
