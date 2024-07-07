@@ -3,7 +3,7 @@ import './Footer.scss'
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <footer className='footer'>
       <div className="footer__wrap">
         <p className="footer__copy">Copyright 2024 @AGAINST</p>
         <p className="footer__text">Developer: Elena Lenivtseva</p>
@@ -11,7 +11,7 @@ const Footer = () => {
           <a className="footer__contactLink" href="mailto:lenivtseva.lena@yandex.ru">Contact me</a>
         </p>
       </div>
-    </div>
+    </footer>
   )
 }
 

@@ -1,0 +1,27 @@
+@import '../../../../stylesCommon/_common';
+
+.filterBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &__filter {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+    }
+    &__filterText {
+        font-weight: bold;
+    }
+    &__tabs {
+        display: flex;
+        gap: 1rem;
+        color: $grey;
+    }
+}
