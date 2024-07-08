@@ -1,0 +1,12 @@
+@import '../../../stylesCommon/_common';
+
+.filterType {
+    &__subtitle {
+        font-weight: bold;
+    }
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+    }
+}

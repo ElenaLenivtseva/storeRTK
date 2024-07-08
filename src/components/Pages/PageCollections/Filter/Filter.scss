@@ -6,6 +6,25 @@
     align-items: center;
     margin-bottom: 2rem;
 
+    &__pop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30vw;
+        background: $white;
+        z-index: 2;
+        padding: 3rem;
+    }
+    &__popHead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__popTitle {
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
     &__filter {
         display: flex;
         gap: 0.5rem;
@@ -24,4 +43,5 @@
         gap: 1rem;
         color: $grey;
     }
+    
 }
