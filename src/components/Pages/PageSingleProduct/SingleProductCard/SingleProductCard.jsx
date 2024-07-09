@@ -11,7 +11,7 @@ const SingleProductCard = () => {
         <div className="singleProductCard__info">
           <div className="singleProductCard__top">
             <div className="singleProductCard__header">
-              <h3 className="singleProductCard__subtitle"></h3>
+              <h3 className="singleProductCard__subtitle">Noir V Neck Wrap Blouse</h3>
               <img className="singleProductCard__icon" src="" alt="" />
             </div>
             <div className="singleProductCard__rating">
