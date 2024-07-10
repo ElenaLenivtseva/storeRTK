@@ -1,11 +1,20 @@
-import React from 'react'
-import './LinkComp.scss'
+import React from "react";
+import "./LinkComp.scss";
 
-const LinkComp = ({children}) => {
+const LinkComp = ({ children, bold }) => {
   return (
-    // пока a, потом будет Link
-    <a className='link' href="#">{children}</a>
-  )
-}
+    <>
+      {bold ? (
+        <a className="link link_bold" href="#">
+          {children}
+        </a>
+      ) : (
+        <a className="link" href="#">
+          {children}
+        </a>
+      )}
+    </>
+  );
+};
 
-export default LinkComp
+export default LinkComp;

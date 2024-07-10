@@ -5,4 +5,7 @@
     cursor: pointer;
     font-weight: lighter;
     color: $black;
+    &_bold {
+        font-weight: bold;
+    }
 }

@@ -1,11 +1,11 @@
 import React from "react";
 
-const ProductFeature = ({ featureArray, classPostfix }) => {
-  const fullClassName=`singleProductCard__${classPostfix}`
+const ProductFeature = ({ featureArray, title }) => {
+  const fullClassName=`singleProductCard__${title}`
 
   return (
-    <div className="singleProductCard__feature">
-      <div className={fullClassName}>
+    <>
+      <div className={`singleProductCard__feature ${fullClassName}`}>
         {featureArray.map((type, index) => {
           return (
             <p className="singleProductCard__type" key={index}>
@@ -14,7 +14,7 @@ const ProductFeature = ({ featureArray, classPostfix }) => {
           );
         })}
       </div>
-    </div>
+    </>
   );
 };
 
