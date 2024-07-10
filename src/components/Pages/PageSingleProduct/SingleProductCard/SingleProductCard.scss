@@ -1,1 +1,17 @@
 @import '../../../../stylesCommon/common.scss';
+
+.singleProductCard {
+    &__wrap {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 2rem;
+    }
+    &__top {
+        margin-bottom: 1rem;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -4,7 +4,7 @@ import LinkCamp from "../../../Common/LinkComp/LinkComp";
 import Option from "./Option/Option";
 import ProductFeature from "./ProductFeature/ProductFeature";
 import "./SingleProductCard.scss";
-import { heartIcon } from "../../../icons";
+import { heartIcon, starIcon } from "../../../icons";
 
 const productInfo = {
   id: 1,
@@ -27,10 +27,12 @@ const productInfo = {
   note: "Model|Ella is 1.78m tall and wears a size S",
 };
 
+let crutchForStars = Array(productInfo.rating).fill(1);
+
 const SingleProductCard = () => {
   return (
     <section className="singleProductCard">
-      <div className="wrap">
+      <div className="wrap singleProductCard__wrap">
         <div className="singleProductCard__slider">
           <img
             className="singleProductCard__slide"
@@ -48,6 +50,13 @@ const SingleProductCard = () => {
               {heartIcon}
             </div>
             <div className="singleProductCard__rating">
+              <div className="singleProductCard__stars">
+                {crutchForStars.map(()=>{
+                  return (
+                    <>{starIcon}</>
+                  )
+                })}
+              </div>
               <p className="singleProductCard__amountOfReviews">
                 [{productInfo.amountOfReviews} reviews]
               </p>
@@ -72,11 +81,11 @@ const SingleProductCard = () => {
                 featureArray={productInfo.appearanceTypes}
                 classPostfix="appearanceTypes"
               />
+              <ProductFeature
+                featureArray={productInfo.colorTypes}
+                classPostfix="colorTypes"
+              />
             </div>
-            <ProductFeature
-              featureArray={productInfo.colorTypes}
-              classPostfix="colorTypes"
-            />
           </div>
 
           <div className="singleProductCard__amount">
