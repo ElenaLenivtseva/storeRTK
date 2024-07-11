@@ -1,9 +1,8 @@
 @import '../../../../../stylesCommon/common';
 
 .reviewCard {
-    margin: 2rem;
+    margin-top: 1rem;
     color: $black;
-    width: 50%;
     border-bottom: 0.5px solid $grey;
     &__top {
         display: flex;

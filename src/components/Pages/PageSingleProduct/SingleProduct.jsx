@@ -2,8 +2,8 @@ import React from 'react'
 import Footer from '../../Common/Footer/Footer'
 import Navbar from '../../Common/Navbar/Navbar'
 import Recommendations from './Recommendations/Recommendations'
-import ReviewCard from './Reviews/ReviewCard/ReviewCard'
 import SingleProductCard from './SingleProductCard/SingleProductCard'
+import Reviews from './Reviews/Reviews'
 
 
 const SingleProduct = () => {
@@ -11,6 +11,7 @@ const SingleProduct = () => {
     <div className='singleProduct'>
       <Navbar/>
       <SingleProductCard/>
+      <Reviews/>
       <Recommendations/>
       <Footer/>
     </div>
