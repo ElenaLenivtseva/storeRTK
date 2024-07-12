@@ -1,8 +1,9 @@
 import React from "react";
-import "./Reviews.scss";
 import Button from "../../../Common/Button/Button";
 import ReviewCard from "./ReviewCard/ReviewCard";
+import "./Reviews.scss";
 
+// reviews будут получены как часть singleProduct через useSelect, а пока так
 const reviews = [
   {
     id: 1,
@@ -11,7 +12,7 @@ const reviews = [
     date: "2024-07-04",
     author: "Tyenna",
     // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
-    rating: [1, 5, 5, 4, 2],
+    rating: 4,
     size: "M",
     color: "Noir",
     title: "Bold and Secure!",
@@ -25,7 +26,7 @@ const reviews = [
     date: "2024-07-04",
     author: "Tyenna",
     // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
-    rating: [3, 4, 5, 5, 5, 5, 5, 5],
+    rating: 5,
     size: "M",
     color: "Noir",
     title: "Bold and Secure!",
@@ -38,7 +39,7 @@ const reviews = [
     date: "2024-07-04",
     author: "Tyenna",
     // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
-    rating: [3, 3, 3, 5, 5, 4, 4],
+    rating: 3,
     size: "M",
     color: "Noir",
     title: "Bold and Secure!",
@@ -46,6 +47,7 @@ const reviews = [
       "Love the deep V-neck that always stays in place! It's daring without the worry, perfect for nights out",
   },
 ];
+
 const filterButtons = [
   { stars: [1, 2, 3, 4, 5] },
   { color: ["noir", "beige"] },
@@ -81,10 +83,8 @@ const Reviews = () => {
         })}
       </div>
       <div className="reviews__content">
-        {reviews.map((review, index)=> {
-            return (
-                <ReviewCard review={review} key={index}/>
-            )
+        {reviews.map((review, index) => {
+          return <ReviewCard review={review} key={index} />;
         })}
       </div>
     </div>
