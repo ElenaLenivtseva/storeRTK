@@ -1,0 +1,16 @@
+@import '../../../../../stylesCommon/common';
+
+.progress {
+    height: 0.8rem;
+    border-radius: 0.3rem;
+    background-color: $beige;
+    margin-bottom: 25px;
+
+    &__inner {
+        height: 100%;
+        border-radius: 0.3rem;
+        width: 80%;
+        background: $black;
+        transition: all 0.3s ease-in-out;
+    }
+}
