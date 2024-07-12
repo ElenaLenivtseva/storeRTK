@@ -10,8 +10,8 @@ const reviews = [
     product: "Noir Dress",
     date: "2024-07-04",
     author: "Tyenna",
-    // пусть костыль побудет тут...
-    rating: [1, 1, 1, 1, 1],
+    // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
+    rating: [1, 5, 5, 4, 2],
     size: "M",
     color: "Noir",
     title: "Bold and Secure!",
@@ -19,13 +19,26 @@ const reviews = [
       "Love the deep V-neck that always stays in place! It's daring without the worry, perfect for nights out",
   },
   {
-    id: 1,
+    id: 2,
     // тут будет id продукта, скорее всего...
     product: "Noir Dress",
     date: "2024-07-04",
     author: "Tyenna",
-    // пусть костыль побудет тут...
-    rating: [1, 1, 1, 1, 1],
+    // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
+    rating: [3, 4, 5, 5, 5, 5, 5, 5],
+    size: "M",
+    color: "Noir",
+    title: "Bold and Secure!",
+    comment:
+      "Love the deep V-neck that always stays in place! It's daring without the worry, perfect for nights out",
+  },
+  {
+    id: 3,
+    product: "Noir Dress",
+    date: "2024-07-04",
+    author: "Tyenna",
+    // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
+    rating: [3, 3, 3, 5, 5, 4, 4],
     size: "M",
     color: "Noir",
     title: "Bold and Secure!",
