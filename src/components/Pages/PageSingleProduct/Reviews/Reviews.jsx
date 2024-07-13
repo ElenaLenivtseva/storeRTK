@@ -3,50 +3,8 @@ import Button from "../../../Common/Button/Button";
 import ReviewCard from "./ReviewCard/ReviewCard";
 import "./Reviews.scss";
 
-// reviews будут получены как часть singleProduct через useSelect, а пока так
-const reviews = [
-  {
-    id: 1,
-    // тут будет id продукта, скорее всего...
-    product: "Noir Dress",
-    date: "2024-07-04",
-    author: "Tyenna",
-    // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
-    rating: 4,
-    size: "M",
-    color: "Noir",
-    title: "Bold and Secure!",
-    comment:
-      "Love the deep V-neck that always stays in place! It's daring without the worry, perfect for nights out",
-  },
-  {
-    id: 2,
-    // тут будет id продукта, скорее всего...
-    product: "Noir Dress",
-    date: "2024-07-04",
-    author: "Tyenna",
-    // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
-    rating: 5,
-    size: "M",
-    color: "Noir",
-    title: "Bold and Secure!",
-    comment:
-      "Love the deep V-neck that always stays in place! It's daring without the worry, perfect for nights out",
-  },
-  {
-    id: 3,
-    product: "Noir Dress",
-    date: "2024-07-04",
-    author: "Tyenna",
-    // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
-    rating: 3,
-    size: "M",
-    color: "Noir",
-    title: "Bold and Secure!",
-    comment:
-      "Love the deep V-neck that always stays in place! It's daring without the worry, perfect for nights out",
-  },
-];
+// Тут был массив reviews. Reviews будут получены как часть singleProduct через useSelect, но пока решила получить их через пропсы
+
 
 const filterButtons = [
   { stars: [1, 2, 3, 4, 5] },
@@ -54,10 +12,10 @@ const filterButtons = [
   { size: ["XS", "S", "M", "L", "XL"] },
 ];
 
-const Reviews = () => {
+const Reviews = ({reviews}) => {
   return (
     <div className="reviews">
-      <h6 className="reviews__title">Filter Reviews by</h6>
+      <h6 className="subtitle_smallest reviews__title">Filter Reviews by</h6>
       <div className="reviews__filterWrap">
         {filterButtons.map((item, index) => {
           console.log(Object.keys(item));
@@ -87,6 +45,7 @@ const Reviews = () => {
           return <ReviewCard review={review} key={index} />;
         })}
       </div>
+      <Button className='button button_black reviews__loadButton'>Load More</Button>
     </div>
   );
 };

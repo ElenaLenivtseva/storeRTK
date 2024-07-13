@@ -1,0 +1,17 @@
+@import '../../../../stylesCommon/common';
+
+.statistic {
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__subtitle{
+       margin-bottom: 2rem; 
+    }
+    &__top {
+        margin: 2rem 0;
+    }
+}

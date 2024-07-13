@@ -116,7 +116,7 @@ html {}
 body {
     line-height: 1;
     font-family: 'Inter', sans-serif;
-	background: $white;
+    background: $white;
 }
 
 ol,
@@ -166,10 +166,11 @@ a {}
 * {
     font-size: 10px;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0; 
+    margin: 0;
 }
 
 .title {
@@ -183,6 +184,7 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
     font-size: 2.8rem;
 
+    // найти где применяется, отредактировать название на mid
     &_sm {
         font-size: 2rem;
     }
@@ -190,8 +192,16 @@ input::-webkit-inner-spin-button {
     &_white {
         color: $white;
     }
+
+    &_smallest {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
 }
 
 .wrap {
     padding: 6rem 5%;
+}
+.wrap_sm {
+    padding: 3rem 5%;
 }

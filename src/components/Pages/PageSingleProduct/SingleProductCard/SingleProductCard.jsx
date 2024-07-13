@@ -2,85 +2,12 @@ import React from "react";
 import Button from "../../../Common/Button/Button";
 import Option from "./Option/Option";
 import ProductFeature from "./ProductFeature/ProductFeature";
-import { findAverage } from "../../../../utils";
-import "./SingleProductCard.scss";
 import { starIcon } from "../../../icons";
+import "./SingleProductCard.scss";
 
-const productInfo = {
-  id: 1,
-  title: "Noir V Neck Wrap Blouse",
-  img: [
-    "https://img.ltwebstatic.com/images3_pi/2023/07/15/1689355312b07e31dacd0d30b161770bff88f0c3a6_thumbnail_720x_thumbnail_720x.jpg",
-  ],
-  price: 420,
-  materials: ["Cotton 80%", "Poliester 15%", "Elastan 5%"],
-  sizes: ["S", "M", "L", "XL"],
-  colors: [
-    { colorText: "noir", colorCode: "#000", active: true },
-    { colorText: "beige", colorCode: "#FFE4B5", active: false },
-  ],
-  bodyTypes: ["Apple", "Pear"],
-  appearanceTypes: ["GR", "RG"],
-  colorTypes: ["Cold Winter"],
-  note: "Model|Ella is 1.78m tall and wears a size S",
-  reviews: [
-    {
-      id: 1,
-      // тут будет id продукта, скорее всего...
-      product: "Noir Dress",
-      date: "2024-07-04",
-      author: "Tyenna",
-      // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
-      rating: 4,
-      size: "M",
-      color: "Noir",
-      title: "Bold and Secure!",
-      comment:
-        "Love the deep V-neck that always stays in place! It's daring without the worry, perfect for nights out",
-    },
-    {
-      id: 2,
-      // тут будет id продукта, скорее всего...
-      product: "Noir Dress",
-      date: "2024-07-04",
-      author: "Tyenna",
-      // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
-      rating: 5,
-      size: "M",
-      color: "Noir",
-      title: "Bold and Secure!",
-      comment:
-        "Love the deep V-neck that always stays in place! It's daring without the worry, perfect for nights out",
-    },
-    {
-      id: 3,
-      product: "Noir Dress",
-      date: "2024-07-04",
-      author: "Tyenna",
-      // при отправке каждого нового отзыва нужна будет проверка, что оценка от 1 до 5
-      rating: 3,
-      size: "M",
-      color: "Noir",
-      title: "Bold and Secure!",
-      comment:
-        "Love the deep V-neck that always stays in place! It's daring without the worry, perfect for nights out",
-    },
-  ],
-};
 
-function createCrutchForStars(productInfo){
-  let allRatings = []
-  for (let i=0; i<productInfo.reviews.length; i++) {
-    allRatings.push(productInfo.reviews[i].rating)
-  }
-  
-  const averageRating = Math.round(allRatings.reduce(findAverage, 0));
-  return Array(averageRating).fill(1);
-}
 
-const SingleProductCard = () => {
-  const crutchForStars = createCrutchForStars(productInfo)
-
+const SingleProductCard = ({productInfo, crutchForStars}) => {
   return (
     <section className="singleProductCard">
       <div className="wrap singleProductCard__wrap">
@@ -95,7 +22,7 @@ const SingleProductCard = () => {
         <div className="singleProductCard__info">
           <div className="singleProductCard__top">
             <div className="singleProductCard__header">
-              <h3 className="singleProductCard__subtitle">
+              <h3 className="subtitle-smallest singleProductCard__subtitle">
                 {productInfo.title}
               </h3>
               <svg
