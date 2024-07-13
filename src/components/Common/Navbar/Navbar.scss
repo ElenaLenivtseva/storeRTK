@@ -10,29 +10,54 @@
         padding: 1rem 0;
         font-size: 1.6rem;
     }
+
     &__bottom {
         background: $white;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5%;
+        border-bottom: 0.4px solid $black;
     }
+
     &__logo {
-        
+        font-size: 1.5rem;
+        font-style: italic;
     }
+
     &__menu {
         display: flex;
     }
+
     &__menuItem {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
     }
-    &__itemSVG {
 
+    &__arrow {
+        margin-left: 0.3rem;
+        width: 1.5rem;
     }
+
     &__actionsWrap {
-
+        display: flex;
     }
-    &__actionImg {
-
+    &__action {
+        cursor: pointer;
+        &:not(:last-child){
+            margin-right: 0.7rem;
+        }
     }
+    &__icon {
+        width: 1.5rem;
+        
+    }
+
     &__offer {
         font-size: 0.8rem;
     }
