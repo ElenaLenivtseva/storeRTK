@@ -92,7 +92,7 @@ const SingleProductCard = ({productInfo, crutchForStars}) => {
           </div>
 
           <p className="singleProductCard__note">{productInfo.note}</p>
-          <Button className="button_black">Add to Cart</Button>
+          <Button className="button_totalBlack">Add to Cart</Button>
         </div>
       </div>
     </section>

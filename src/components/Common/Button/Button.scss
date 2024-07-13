@@ -21,6 +21,16 @@
             cursor: pointer;
         }
     }
+    &_totalBlack {
+        background: $black;
+        color: $white;
+        &:hover {
+            border: 0.5px solid $black;
+            background: none;
+            color: $black;
+            cursor: pointer;
+        }
+    }
     &_sm {
         width: 30%;
     }
