@@ -1,0 +1,9 @@
+@import '../../../stylesCommon/common';
+
+.cart {
+    width: 50%;
+    &__total {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -6,11 +6,13 @@ import MostWanted from './MostWanted/MostWanted'
 import Navbar from '../../Common/Navbar/Navbar'
 import ShopByCategory from './ShopByCategory/ShopByCategory'
 import TopCollection from './TopCollection/TopCollection'
+import Cart from '../../Common/Cart/Cart'
 
 const TheFirstPage = () => {
   return (
     <div>
       <Navbar/>
+      <Cart/>
       <TopCollection/>
       <MostWanted/>
       <ShopByCategory/>
