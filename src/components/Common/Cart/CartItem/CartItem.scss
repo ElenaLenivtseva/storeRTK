@@ -5,7 +5,11 @@
     grid-template-columns: 1fr 2fr;
     gap: 1rem;
     color: $black;
-    
+
+    &:not(last-child) {
+        margin-bottom: 2rem;
+    }
+
     &__imgWrap {
         height: 15rem;
         overflow: hidden;

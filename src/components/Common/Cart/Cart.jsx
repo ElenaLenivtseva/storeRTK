@@ -60,9 +60,7 @@ const cartCards = [
       { colorText: "beige", colorCode: "#FFE4B5", active: false },
     ],
     amount: 1,
-  }
-
-    
+  } 
 ];
 
 const Cart = () => {
@@ -83,9 +81,6 @@ const Cart = () => {
         <p className="cart__subtotalPrice">750$</p>
       </div>
       <Button className="button button_totalBlack cart__buttonGo">Go to Checkout</Button>
-      <Button className="button button_totalBlack">
-        Continue Shopping
-      </Button>
     </div>
   );
 };
