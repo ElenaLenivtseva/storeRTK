@@ -1,47 +1,18 @@
 import React from "react";
+import { cartArrowIcon } from "../../../icons";
 
-const CartItemFeature = ({ featureTitle, featureParameters }) => {
+const CartItemFeature = ({ featureTitle, card }) => {
+  
   return (
     <div className="cartItem__feature">
       <p className="cartItem__featureKey">{featureTitle}</p>
-      (featureParameters.length===1 ? (
-      <>
-        <p className="cartItem__featureValue">${featureParameters[0]}</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={0.5}
-          stroke="currentColor"
-          className="cartItem__arrow"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m19.5 8.25-7.5 7.5-7.5-7.5"
-          />
-        </svg>
-      </>
-      ) : (
-      <>
-        <p className="cartItem__featureValue">{featureParameters[0]}</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={0.5}
-          stroke="currentColor"
-          className="cartItem__arrow"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m19.5 8.25-7.5 7.5-7.5-7.5"
-          />
-        </svg>
-        {/* тут должен быть раскрывающийся список */}
-      </>
-      ) )
+      
+      {featureTitle==='Price'? <p className="cartItem__featureValue">${card.price}</p> : ''}
+      {featureTitle==='Color'? <p className="cartItem__featureValue">{card.colors[0].colorText}</p> : ''}
+      {featureTitle==='Size'? <p className="cartItem__featureValue">{card.sizes[0]}</p> : ''}
+      {featureTitle==='Amount'? <p className="cartItem__featureValue">{card.amount}</p> : ''}
+      
+      {cartArrowIcon}
     </div>
   );
 };
