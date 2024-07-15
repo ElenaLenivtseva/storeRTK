@@ -8,7 +8,7 @@ const TopCollection = () => {
       <div className="topCollection__imgWrap">
         <img
           className="topCollection__bg"
-          src="https://images.unsplash.com/photo-1568251188392-ae32f898cb3b?q=80&w=1462&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://magda-butrym.imgix.net/https%3A%2F%2Fimages.ctfassets.net%2Fkxhvkk17lhp1%2F6snblkSvAokvM1I3kuXg5Q%2F719807facbad965f0fb8cb20c2cd6663%2Fbridal__1_.jpg?ixlib=js-2.3.2&w=1400&h=false&fit=crop&auto=format&q=80&s=2cc574e30a6be1b492d3f5e1d4e9b01e"
           alt="a new collection's product"
         />
       </div>

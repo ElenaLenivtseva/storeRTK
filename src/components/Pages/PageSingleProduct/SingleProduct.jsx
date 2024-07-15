@@ -11,7 +11,7 @@ const productInfo = {
   id: 1,
   title: "Noir V Neck Wrap Blouse",
   img: [
-    "https://img.ltwebstatic.com/images3_pi/2023/07/15/1689355312b07e31dacd0d30b161770bff88f0c3a6_thumbnail_720x_thumbnail_720x.jpg",
+    "https://cdn.shopify.com/s/files/1/0417/4987/2806/files/SS24_DRESS_01_BLACK_01.jpg?v=1706566862&width=768&crop=center",
   ],
   price: 420,
   materials: ["Cotton 80%", "Poliester 15%", "Elastan 5%"],
