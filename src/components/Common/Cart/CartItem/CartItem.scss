@@ -2,19 +2,60 @@
 
 .cartItem {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 1rem;
+    color: $black;
+    
     &__imgWrap {
-
+        height: 15rem;
+        overflow: hidden;
+        background: $beige;
     }
+
     &__img {
         object-fit: cover;
         width: 100%;
     }
+
     &__arrow {
         width: 1.5rem;
+        cursor: pointer;
     }
+
+    &__productTitle {
+        margin-bottom: 1.3rem;
+        font-weight: bold;
+    }
+    &__content {
+        position: relative;
+    }
+    &__remove {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: lighter;
+        color: $grey;
+        transition: 0.5s ease-in-out;
+        &:hover {
+            color: $black;
+        }
+    }
+
+    &__featureKey {
+        color: $grey;
+        margin-right: 1rem;
+
+    }
+
     &__feature {
         display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
     }
+
 }

@@ -9,7 +9,7 @@ function takeAllEstimates(productInfo) {
   return allEstimates;
 }
 
-function countPercentage(amount, length) {
+function calcPercentage(amount, length) {
   return Math.round((amount * 100) / length);
 }
 
@@ -45,10 +45,10 @@ export function createArrOfEstimatesRercentaiges(productInfo) {
   }
 
   return [
-    countPercentage(amountOneStar, allEstimates.length),
-    countPercentage(amountTwoStars, allEstimates.length),
-    countPercentage(amountThreeStars, allEstimates.length),
-    countPercentage(amountFourStars, allEstimates.length),
-    countPercentage(amountFiveStars, allEstimates.length),
+    calcPercentage(amountOneStar, allEstimates.length),
+    calcPercentage(amountTwoStars, allEstimates.length),
+    calcPercentage(amountThreeStars, allEstimates.length),
+    calcPercentage(amountFourStars, allEstimates.length),
+    calcPercentage(amountFiveStars, allEstimates.length),
   ];
 }
