@@ -1,0 +1,53 @@
+@import '../../../stylesCommon/common';
+
+.search {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &__top {
+        height: 8rem;
+        width: 90%;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        z-index: 2;
+        background: $white;
+    }
+
+    &__input {
+        margin: 0 15%;
+        appearance: none;
+        flex-grow: 1;
+        border: none;
+        border-bottom: 0.1rem solid $black;
+        height: 2rem;
+        font-size: 1rem;
+        background: none;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &__results {
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__message {
+        font-style: italic;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__productsWrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+}

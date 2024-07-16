@@ -13,7 +13,7 @@ const Navbar = () => {
         </p>
       </div>
       <div className="navbar__bottom">
-        <p className="navbar__logo">AGAINST</p>
+        <p className="logo">AGAINST</p>
         <div className="navbar__menu">
           {menuItems.map((item, index) => {
             return <NavbarMenuItem key={index} text={item} />;

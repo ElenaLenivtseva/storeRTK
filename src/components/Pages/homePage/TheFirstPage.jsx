@@ -7,18 +7,19 @@ import Navbar from '../../Common/Navbar/Navbar'
 import ShopByCategory from './ShopByCategory/ShopByCategory'
 import TopCollection from './TopCollection/TopCollection'
 import Cart from '../../Common/Cart/Cart'
-
+import Search from '../../Common/Search/Search'
 const TheFirstPage = () => {
   return (
     <div>
-      <Navbar/>
+      <Search/>
+      {/* <Navbar/>
       <Cart/>
       <TopCollection/>
       <MostWanted/>
       <ShopByCategory/>
       <LastCollections/>
       <About/>
-      <Footer/>
+      <Footer/> */}
     </div>
   )
 }
