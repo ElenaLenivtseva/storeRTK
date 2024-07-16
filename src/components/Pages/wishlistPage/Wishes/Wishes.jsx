@@ -1,8 +1,6 @@
 import React from "react";
-import Button from "../Button/Button";
-import CartItem from "./CartItem/CartItem";
-import "./Cart.scss";
-import { closeIcon } from "../../icons";
+import "./Wishes.scss";
+import CartItem from "../../../Common/Cart/CartItem/CartItem";
 
 const cartCards = [
   {
@@ -60,29 +58,21 @@ const cartCards = [
       { colorText: "beige", colorCode: "#FFE4B5", active: false },
     ],
     amount: 1,
-  } 
+  },
 ];
-
-const Cart = () => {
+const Wishes = () => {
   return (
-    <div className="cart">
-      <div className="cart__header">
-        <h4 className="cart__title">Cart [{cartCards.length} items]</h4>
-        {closeIcon}
+    <div className="wishes">
+      <div className="wrap">
+        <div className="subtitle wishes__title">Your wishlist</div>
+        <div className="wishes__wrap">
+          {cartCards.map((item) => {
+            return <CartItem card={item} key={item.id} isForWishlist={true}/>;
+          })}
+        </div>
       </div>
-
-      <div className="cart__cardsWrap">
-        {cartCards.map((item) => {
-          return <CartItem card={item} key={item.id} isForWishlist={false}/>;
-        })}
-      </div>
-      <div className="cart__subtotal">
-        <p className="cart__subtotalText">Subtotal</p>
-        <p className="cart__subtotalPrice">750$</p>
-      </div>
-      <Button className="button button_totalBlack cart__buttonGo">Go to Checkout</Button>
     </div>
   );
 };
 
-export default Cart;
+export default Wishes;

@@ -1,0 +1,11 @@
+@import '../../../../stylesCommon/common';
+
+.wishes {
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__title {
+        margin-bottom: 2rem;
+    }
+}
