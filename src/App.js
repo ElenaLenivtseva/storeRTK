@@ -4,7 +4,7 @@ import LoginPage from "./components/Pages/loginPage/LoginPage";
 import ShopPageCollections from "./components/Pages/PageCollections/ShopPageCollections";
 import SingleProduct from "./components/Pages/PageSingleProduct/SingleProduct";
 import PageFirst from "./components/Pages/homePage/TheFirstPage";
-import PageWishlist from "./components/Pages/wishlistPage/PageWishlist";
+import PageWishlist from "./components/Pages/PageWishlist/PageWishlist";
 
 
 function App() {
