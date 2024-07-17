@@ -1,9 +1,9 @@
 import React from "react";
 import NavbarMenuItem from "../NavbarMenuItem/NavbarMenuItem";
-import "./Navbar.scss";
 import { accountIcon, cartIcon, heartNavbarIcon, searchIcon } from "../../icons";
+import "./Navbar.scss";
 
-const menuItems = ["Clothes", "Accessories", "Body Type", "Appearance"];
+const menuItems = ["Clothes", "Color Type", "Body Type", "Appearance"];
 const Navbar = () => {
   return (
     <div className="navbar">

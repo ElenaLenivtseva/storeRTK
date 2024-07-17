@@ -1,0 +1,25 @@
+@import '../../../../stylesCommon/common';
+
+.categoryType {
+    margin-bottom: 7rem;
+    &__title {
+        margin-bottom: 2rem;
+       text-align: center;
+    }
+    &__cardsWrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        &_two {
+            grid-template-columns: 1fr 1fr;
+        }
+        &_three {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &_four {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        &_five {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+    }
+}
