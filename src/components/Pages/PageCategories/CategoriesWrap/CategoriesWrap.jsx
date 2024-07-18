@@ -84,7 +84,7 @@ const categories = {
     {
       id: 16,
       title: "Natural-Gamin",
-      img: "https://cdn.shopify.com/s/files/1/0417/4987/2806/files/RE24-DENIM-04-CORSET-BLUE_03.jpg?v=1700049587&width=768&crop=center",
+      img: "https://cdn.shopify.com/s/files/1/0417/4987/2806/files/SS24_DENIM_05_SHORTS_BLACK_03.jpg?v=1706566723&width=768&crop=center",
     },
     {
       id: 17,
