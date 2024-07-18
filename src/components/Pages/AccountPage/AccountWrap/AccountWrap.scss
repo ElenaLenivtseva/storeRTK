@@ -1,0 +1,11 @@
+@import '../../../../stylesCommon/common';
+
+.accountWrap {
+    &__container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+    }
+
+}

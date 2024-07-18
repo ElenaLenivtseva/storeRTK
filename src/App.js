@@ -3,9 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from "./components/Pages/loginPage/LoginPage";
 import ShopPageCollections from "./components/Pages/PageCollections/ShopPageCollections";
 import SingleProduct from "./components/Pages/PageSingleProduct/SingleProduct";
+import PageAccount from "./components/Pages/AccountPage/PageAccount";
 import PageFirst from "./components/Pages/homePage/TheFirstPage";
 import PageCategories from "./components/Pages/PageCategories/PageCategories";
 import PageWishlist from "./components/Pages/PageWishlist/PageWishlist";
+
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
           <Route path="/wishlist" element={<PageWishlist/>} />
           <Route path="/singleProduct" element={<SingleProduct />} />
           <Route path="/collections/" element={<ShopPageCollections />} />
+          <Route path="/account" element={<PageAccount/>} />
         </Routes>
       </BrowserRouter>
     </div>

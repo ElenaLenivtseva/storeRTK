@@ -1,0 +1,21 @@
+@import '../../../../stylesCommon/common';
+
+.accountMenuItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:not(:last-child){
+        margin-bottom: 1rem;
+    }
+
+    &:last-child {
+        border-top: 0.1rem solid $grey;
+        padding-top: 1rem;
+    }
+    
+    &__icon {
+        width: 1.5rem;
+        margin-right: 1rem;
+    }
+}
