@@ -5,6 +5,8 @@
         display: grid;
         padding: 2rem 0;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+
         &:not(:last-child) {
             border-bottom: 0.1rem solid $grey;
         }
@@ -16,14 +18,17 @@
             margin-bottom: 2rem;
         }
     }
+
     &__withSvg {
         display: flex;
         align-items: center;
     }
+
     &__icon {
         width: 1.5rem;
         margin-right: 0.5rem;
     }
+
     &__title {
         margin-bottom: 0.5rem;
         font-weight: bold;
@@ -47,5 +52,57 @@
             background: $black;
             color: $white;
         }
+    }
+
+    // orders
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__filter {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__filterText {
+        font-size: 1.5rem;
+    }
+
+    &__wrapImg {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &__img {
+        max-width: 100%;
+        max-height: 30rem;
+        object-fit: cover;
+    }
+
+    &__infoStretch {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    &__status {
+        padding: 0.2rem 1rem;
+        display: flex;
+        justify-self: center;
+        border-radius: 1rem;
+
+        &Recieved {
+            background: #97e265;
+        };
+
+        &Progress {
+            background: #eeec5d;
+        };
+    }
+    &__subtitleWithoutMargin {
+        margin-bottom: 0;
     }
 }
