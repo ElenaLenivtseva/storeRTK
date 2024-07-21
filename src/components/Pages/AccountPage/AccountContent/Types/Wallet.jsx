@@ -7,19 +7,39 @@ const Wallet = () => {
     <div className="accountContent">
       <h3 className="accountContent__title">My Wallet</h3>
       <div className="accountContent__block">
-        <div className="accountContent__wrap">
-          <InfoItem
-            subtitle="Card Number"
-            text="5396 **** **** ****"
-            additionalClass="withSvg"
-          />
-
-          <InfoItem subtitle="Expiration Date" text="**/**" />
-        </div>
-        <div className="accountContent__wrap">
-          <InfoItem subtitle="Cardholder Name" text="Chloe Nicker" />
-          <InfoItem subtitle="CV" text="***" />
-        </div>
+        <WrapItem
+          info={{
+            type: "full",
+            content: [
+              {
+                subtitle: "Card Number",
+                text: "5396 **** **** ****",
+                additionalClass: "withSvg",
+              },
+              {
+                subtitle: "Expiration Date",
+                text: "10012",
+                
+              },
+            ],
+          }}
+        />
+        <WrapItem
+          info={{
+            type: "full",
+            content: [
+              {
+                subtitle: "Cardholder Name",
+                text: "Chloe Nicker",
+              },
+              {
+                subtitle: "CV",
+                text: "***",
+                
+              },
+            ],
+          }}
+        />
         <WrapItem info={{ type: "button", buttonContent: "Edit" }} />
       </div>
       <div className="accountContent__block">

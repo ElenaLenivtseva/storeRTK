@@ -7,15 +7,40 @@ const PersonalInfo = () => {
     <div className="accountContent">
       <h3 className="accountContent__title">My Personal Information</h3>
       <div className="accountContent__block">
-        <div className="accountContent__wrap">
-          <InfoItem subtitle="First Name" text="Chloe" />
-          <InfoItem subtitle="Birthday" text="09/06/1995" />
-          <InfoItem subtitle="Phone Number" text="+1 212-531-3248" />
-        </div>
-        <div className="accountContent__wrap">
-          <InfoItem subtitle="Last Name" text="Nicker" />
-          <InfoItem subtitle="Gender" text="Woman" />
-        </div>
+        <WrapItem
+          info={{
+            type: "full",
+            content: [
+              {
+                subtitle: "First Name",
+                text: "Chloe",
+              },
+              {
+                subtitle: "Birthday",
+                text: "09/06/1995",
+              },
+              {
+                subtitle: "Phone Number",
+                text: "+1 212-531-3248",
+              },
+            ],
+          }}
+        />
+        <WrapItem
+          info={{
+            type: "full",
+            content: [
+              {
+                subtitle: "Last Name",
+                text: "Nicker",
+              },
+              {
+                subtitle: "Gender",
+                text: "Woman",
+              },
+            ],
+          }}
+        />
         <WrapItem info={{ type: "button", buttonContent: "Edit" }} />
       </div>
       <div className="accountContent__block">
