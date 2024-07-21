@@ -95,11 +95,11 @@
         border-radius: 1rem;
 
         &Recieved {
-            background: #97e265;
+            background: $green;
         };
 
         &Progress {
-            background: #eeec5d;
+            background: $yellow;
         };
     }
     &__subtitleWithoutMargin {
