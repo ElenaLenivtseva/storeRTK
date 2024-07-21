@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../../../../Common/Button/Button";
 import InfoItem from "../Common/InfoItem";
+import WrapItem from "../Common/WrapItem";
 
 const Wallet = () => {
   return (
@@ -20,14 +20,12 @@ const Wallet = () => {
           <InfoItem subtitle="Cardholder Name" text="Chloe Nicker" />
           <InfoItem subtitle="CV" text="***" />
         </div>
-        <div className="accountContent__wrap">
-          <Button className="accountContent__button">Edit</Button>
-        </div>
+        <WrapItem info={{ type: "button", buttonContent: "Edit" }} />
       </div>
       <div className="accountContent__block">
-        <div className="accountContent__wrap">
-          <Button className="button_totalBlack">Add New Card</Button>
-        </div>
+        <WrapItem
+          info={{ type: "buttonBlack", buttonContent: "Add New Card" }}
+        />
       </div>
     </div>
   );

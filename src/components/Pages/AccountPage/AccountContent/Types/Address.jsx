@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../../../../Common/Button/Button";
 import InfoItem from "../Common/InfoItem";
+import WrapItem from "../Common/WrapItem";
 
 const Address = () => {
   return (
@@ -16,14 +16,10 @@ const Address = () => {
           <InfoItem subtitle="State/Province" text="NY" />
           <InfoItem subtitle="Postal Code" text="10012" />
         </div>
-        <div className="accountContent__wrap">
-          <Button className="accountContent__button">Edit</Button>
-        </div>
+        <WrapItem info={{type: 'button', buttonContent: 'Edit'}}/>
       </div>
       <div className="accountContent__block">
-        <div className="accountContent__wrap">
-          <Button className="button_totalBlack">Add New Address</Button>
-        </div>
+        <WrapItem info={{type: 'buttonBlack', buttonContent: 'Add New Address'}}/>
       </div>
     </div>
   );

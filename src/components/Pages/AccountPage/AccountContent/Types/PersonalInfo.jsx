@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../../../../Common/Button/Button";
 import InfoItem from "../Common/InfoItem";
+import WrapItem from "../Common/WrapItem";
 
 const PersonalInfo = () => {
   return (
@@ -16,28 +16,22 @@ const PersonalInfo = () => {
           <InfoItem subtitle="Last Name" text="Nicker" />
           <InfoItem subtitle="Gender" text="Woman" />
         </div>
-        <div className="accountContent__wrap">
-          <Button className="accountContent__button">Edit</Button>
-        </div>
+        <WrapItem info={{ type: "button", buttonContent: "Edit" }} />
       </div>
       <div className="accountContent__block">
         <div className="accountContent__wrap">
           <InfoItem subtitle="Email" text="chloenicker@gmail.ru" />
         </div>
-        <div className="accountContent__wrap"></div>
-        <div className="accountContent__wrap">
-          <Button className="accountContent__button">Edit</Button>
-        </div>
+        <WrapItem info={{ type: "void", buttonContent: "" }} />
+        <WrapItem info={{ type: "button", buttonContent: "Edit" }} />
       </div>
       <div className="accountContent__block">
         <div className="accountContent__wrap">
           <p className="accountContent__subtitle">Password</p>
           <p className="accountContent__text">******</p>
         </div>
-        <div className="accountContent__wrap"></div>
-        <div className="accountContent__wrap">
-          <Button className="accountContent__button">Edit</Button>
-        </div>
+        <WrapItem info={{ type: "void", buttonContent: "" }} />
+        <WrapItem info={{ type: "button", buttonContent: "Edit" }} />
       </div>
     </div>
   );
