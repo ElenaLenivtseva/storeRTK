@@ -1,42 +1,14 @@
 import React from "react";
+import BlockItem from "./BlockItem";
 
-const typeAddress = {
-  title: "TITLE",
-  blocks: [
-    {
-      wraps: [
-        {
-          wrap: [
-            { info: { subtitle: "", text: "" } },
-            { info: { subtitle: "", text: "" } },
-            { info: { subtitle: "", text: "" } },
-          ],
-        },
-        {
-          wrap: [
-            { info: { subtitle: "", text: "" } },
-            { info: { subtitle: "", text: "" } },
-          ],
-        },
-        {
-          wrap: [{ button: "Edit" }],
-        },
-      ],
-    },
-    {
-      wraps: [
-        {
-          wrap: [{ button: "Add New Address" }],
-        },
-      ],
-    },
-  ],
-};
 
-const Pattern = () => {
+const Pattern = ({ title, info }) => {
   return (
     <div className="accountContent">
-      <h3 className="accountContent__title">{type.title}</h3>
+      <h3 className="accountContent__title">{title}</h3>
+      {info.map((item,index)=>{
+       return <BlockItem block={item} key={index}/>   
+      })}
     </div>
   );
 };

@@ -1,55 +1,50 @@
 import React from "react";
-import WrapItem from "../Common/WrapItem";
+import Pattern from "../Common/Pattern";
+
+const title = "My Addresses";
+const info = [
+  // BLOCK
+  [
+    // WRAP
+    {
+      type: "full",
+      // CONTENTS = INFOITEMS
+      content: [
+        {
+          subtitle: "Address",
+          text: "80 Greene St.",
+        },
+        {
+          subtitle: "Country",
+          text: "US",
+        },
+        {
+          subtitle: "City",
+          text: "New York",
+        },
+      ],
+    },
+    {
+      type: "full",
+      content: [
+        {
+          subtitle: "State/Province",
+          text: "NY",
+        },
+        {
+          subtitle: "Postal Code",
+          text: "10012",
+        },
+      ],
+    },
+    { type: "button", buttonContent: "Edit" },
+  ],
+  // BLOCK
+  [{ type: "buttonBlack", buttonContent: "Add New Address" }],
+];
 
 const Address = () => {
-  return (
-    <div className="accountContent">
-      <h3 className="accountContent__title">My Shipping Addresses</h3>
-      <div className="accountContent__block">
-        <WrapItem
-          info={{
-            type: "full",
-            content: [
-              {
-                subtitle: "Address",
-                text: "80 Greene St.",
-              },
-              {
-                subtitle: "Country",
-                text: "US",
-              },
-              {
-                subtitle: "City",
-                text: "New York",
-              },
-            ],
-          }}
-        />
-        <WrapItem
-          info={{
-            type: "full",
-            content: [
-              {
-                subtitle: "State/Province",
-                text: "NY",
-              },
-              {
-                subtitle: "Postal Code",
-                text: "10012",
-              },
-            ],
-          }}
-        />
-
-        <WrapItem info={{ type: "button", buttonContent: "Edit" }} />
-      </div>
-      <div className="accountContent__block">
-        <WrapItem
-          info={{ type: "buttonBlack", buttonContent: "Add New Address" }}
-        />
-      </div>
-    </div>
-  );
+  return <Pattern title={title} info={info} />;
 };
 
 export default Address;
