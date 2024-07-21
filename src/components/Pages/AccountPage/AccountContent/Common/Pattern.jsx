@@ -1,7 +1,6 @@
 import React from "react";
 import BlockItem from "./BlockItem";
 
-
 const Pattern = ({ title, info }) => {
   return (
     <div className="accountContent">
