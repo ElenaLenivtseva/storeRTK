@@ -1,11 +1,11 @@
 import React from "react";
-import Address from "./Address";
-import Orders from "./Orders";
-import PersonalInfo from "./PersonalInfo";
-import Wallet from "./Wallet";
+import Address from "./Types/Address";
+import Orders from "./Types/Orders";
+import PersonalInfo from "./Types/PersonalInfo";
+import Wallet from "./Types/Wallet";
 import "./AccountContent.scss";
 
-let type = "orders";
+let type = "wallet";
 
 const AccountContent = () => {
   return (

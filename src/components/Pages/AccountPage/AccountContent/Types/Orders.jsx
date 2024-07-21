@@ -1,5 +1,5 @@
 import React from "react";
-import { openArrowIcon } from "../../../icons";
+import { openArrowIcon } from "../../../../icons";
 import OrderProduct from "./OrderProduct";
 
 const orders = [

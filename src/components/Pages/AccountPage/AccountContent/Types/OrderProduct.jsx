@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../../Common/Button/Button";
+import Button from "../../../../Common/Button/Button";
 
 const OrderProduct = ({ info }) => {
   return (
