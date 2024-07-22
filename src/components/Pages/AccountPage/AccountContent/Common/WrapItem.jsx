@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../../../../Common/Button/Button";
 import InfoItem from "./InfoItem";
 
-
 const WrapItem = ({ info }) => {
   return (
     <>
@@ -35,6 +34,17 @@ const WrapItem = ({ info }) => {
               />
             );
           })}
+        </div>
+      ) : (
+        ""
+      )}
+      {info.type === "img" ? (
+        <div className="accountContent__wrap accountContent__wrapImg">
+          <img
+            className="accountContent__img"
+            src={info.imgSrc}
+            alt={info.imgTitle}
+          />
         </div>
       ) : (
         ""
