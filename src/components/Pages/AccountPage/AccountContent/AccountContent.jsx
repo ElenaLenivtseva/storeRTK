@@ -5,7 +5,7 @@ import PersonalInfo from "./Types/PersonalInfo";
 import Wallet from "./Types/Wallet";
 import "./AccountContent.scss";
 
-let type = "wallet";
+let type = "orders";
 
 const AccountContent = () => {
   return (
