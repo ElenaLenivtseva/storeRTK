@@ -1,0 +1,28 @@
+@import '../../../../../stylesCommon/common';
+.totalCart{
+    width: 30%;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    &__subtitle {
+        font-size: 1.7rem;
+    }
+    &__itemsAmount {
+        font-weight: bold;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        &:not(:last-child) {
+            border-bottom: 0.1rem solid $grey;
+        }
+    }
+    &__button {
+        margin-top: 1rem;
+    }
+}
