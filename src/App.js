@@ -7,6 +7,7 @@ import PageAccount from "./components/Pages/AccountPage/PageAccount";
 import PageFirst from "./components/Pages/homePage/TheFirstPage";
 import PageCategories from "./components/Pages/PageCategories/PageCategories";
 import PageWishlist from "./components/Pages/PageWishlist/PageWishlist";
+import CartPage from "./components/Pages/CartPage/CartPage";
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/singleProduct" element={<SingleProduct />} />
           <Route path="/collections/" element={<ShopPageCollections />} />
           <Route path="/account" element={<PageAccount/>} />
+          <Route path="/cart" element={<CartPage/>} />
         </Routes>
       </BrowserRouter>
     </div>
