@@ -7,7 +7,7 @@ const TotalCart = () => {
   return (
     <div className="totalCart">
       <div className="totalCart__header">
-        <h4 className="subtitle totalCart__subtitle">Total Cart</h4>
+        <h4 className="totalCart__subtitle">Total Cart</h4>
         <p className="totalCart__itemsAmount">[2 items]</p>
       </div>
       <div className="totalCart__body">

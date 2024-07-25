@@ -1,0 +1,12 @@
+@import '../../../../../stylesCommon/common';
+
+.overview {
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
