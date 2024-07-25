@@ -1,1 +1,40 @@
 @import '../../../../stylesCommon/common';
+
+.cartNav {
+    position: relative;
+    &__line {
+        position: absolute;
+        top: 80%;
+        height: 1px;
+        background: $grey;
+        width: 100%;
+        z-index: -1;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: $grey;
+        border-radius: 50%;
+        color: $white;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        
+    }
+    &__active {
+        background: $black;
+    }
+}
