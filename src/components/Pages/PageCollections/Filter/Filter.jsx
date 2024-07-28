@@ -47,7 +47,7 @@ const colorTypeTitles = [
   "Cold Autumn",
 ];
 
-const Filter = () => {
+const Filter = ({ type }) => {
   return (
     <div className="filterBar collections__filterBar">
       <div className="filterBar__pop">
@@ -56,7 +56,12 @@ const Filter = () => {
           {closeIcon}
         </div>
         <div className="filterBar__popContent">
-          <FilterType name="Clothes Type" array={typeTitles} />
+          {type === "clothes" ? (
+            ""
+          ) : (
+            <FilterType name="Clothes Type" array={typeTitles} />
+          )}
+
           <FilterType name="Body Type" array={bodyTypeTitles} />
           <FilterType name="Appearance Type" array={appearanceTypeTitles} />
           <FilterType name="Color Type" array={colorTypeTitles} />
@@ -69,9 +74,15 @@ const Filter = () => {
         <p className="filterBar__filterText">Filter</p>
       </div>
       <div className="filterBar__tabs">
-        {titleOfCollections.map((title, index) => {
-          return <LinkComp key={index}>{title}</LinkComp>;
-        })}
+        {type === "clothes" ? (
+          ""
+        ) : (
+          <>
+            {titleOfCollections.map((title, index) => {
+              return <LinkComp key={index}>{title}</LinkComp>;
+            })}
+          </>
+        )}
       </div>
       <div className="filterBar__filter">
         <p className="filterBar__filterText">Sort</p>

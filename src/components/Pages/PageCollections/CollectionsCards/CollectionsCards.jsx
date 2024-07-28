@@ -74,7 +74,7 @@ const CollectionsCards = () => {
   return (
     <div className="collections">
       <div className="wrap">
-        <Filter />
+        <Filter type='clothes'/>
         <div className="collections__wrap">
           {initialProducts.map((product) => {
             return <ProductCard key={product.id} info={product} />;
