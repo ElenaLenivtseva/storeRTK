@@ -1,7 +1,7 @@
 import React from "react";
 import ItemTotalCart from "./ItemTotalCart";
 import './TotalCart.scss'
-import Button from "../../../../Common/Button/Button";
+import Button from "../../../../../Common/Button/Button";
 
 const TotalCart = () => {
   return (

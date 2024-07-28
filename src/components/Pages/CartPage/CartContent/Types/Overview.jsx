@@ -1,5 +1,5 @@
 import React from "react";
-import CartItem from "../../../../Common/Cart/CartItem/CartItem";
+import CartItem from '../../../../Common/Cart/CartItem/CartItem'
 import './Overview.scss'
 const cartCards = [
   {

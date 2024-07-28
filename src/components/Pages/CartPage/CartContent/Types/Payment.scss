@@ -1,6 +1,6 @@
 @import '../../../../../stylesCommon/common';
 
-.confirmation {
+.payment {
     &__title {
         font-size: 2rem;
         margin-bottom: 1.5rem;
@@ -27,18 +27,7 @@
 
     &__checks {
         margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
     }
-
-    &__check {
-        &:not(:last-child) {
-            margin-bottom: 0.5rem;
-        }
-
-    }
-
-    &__label {
-        margin-left: 0.3rem;
-    }
-
-
 }
