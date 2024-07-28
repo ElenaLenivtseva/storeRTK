@@ -4,12 +4,13 @@ import Overview from "./Types/Overview/Overview";
 import "./CartContent.scss";
 import Payment from "./Types/Payment/Payment";
 import Shipping from "./Types/Shipping/Shipping";
+import Confirmation from './Types/Confirmation/Confirmation'
 
 const CartContent = () => {
   return (
     <div className="wrap">
       <div className="cartContent">
-        <Shipping/>
+        <Confirmation/>
         <TotalCart />
       </div>
     </div>

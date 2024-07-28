@@ -63,7 +63,7 @@ const cartCards = [
 const Overview = () => {
   return (
     <div className="overview">
-      <h3 className="subtitle overview__title">Your Cart</h3>
+      <h3 className="subtitle subtitle_sm overview__title">Your Cart</h3>
       <div className="overview__wrap">
         {cartCards.map((item) => {
           return <CartItem card={item} key={item.id} isForWishlist={false} />;
