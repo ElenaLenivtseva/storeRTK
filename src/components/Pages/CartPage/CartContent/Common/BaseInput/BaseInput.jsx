@@ -1,9 +1,9 @@
 import React from 'react'
 import './BaseInput.scss'
 
-const BaseInput = ({type, placeholder}) => {
+const BaseInput = ({info}) => {
   return (
-    <input className="input" type={type} placeholder={placeholder} />
+    <input className="input" type={info.type} placeholder={info.placeholder} />
   )
 }
 

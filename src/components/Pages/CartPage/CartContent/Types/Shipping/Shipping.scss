@@ -5,6 +5,20 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        margin-bottom: 3rem;
     }
-    
+
+    &__deliveryWrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__deliveryTitle {
+        margin-bottom: 2rem;
+    }
+    &__deliveryNote {
+        margin-bottom: 2rem;
+    }
 }
