@@ -1,5 +1,6 @@
 import React from "react";
 import CartItem from "../../../../../Common/Cart/CartItem/CartItem";
+import OrderDetail from "./OrderDetail";
 import "./Confirmation.scss";
 
 const order = {
@@ -36,6 +37,39 @@ const order = {
     },
   ],
 };
+
+const info = [
+  {
+    title: "Shipping Information",
+    blocks: [
+      {
+        subtitle: "Address",
+        texts: [
+          "Chloe Nicker",
+          "80 Greene St.",
+          "New York, NY 10012, US",
+          "chloenicker@gmail.ru",
+          "+ 1 212-531-3248",
+        ],
+      },
+      {
+        subtitle: "Delivery Speed",
+        texts: ["Arrives in 3-5 business days"],
+      },
+    ],
+  },
+  {
+    title: "Payment Information",
+    blocks: [
+      {
+        subtitle: "Payment Method",
+        texts: [
+          "5389 **** **** ****",
+        ],
+      },
+    ],
+  },
+];
 const Confirmation = () => {
   return (
     <div className="confirmation">
@@ -66,42 +100,11 @@ const Confirmation = () => {
         </div>
       </div>
       <div className="confirmation__orderDetails">
-        <div className="confirmation__detailsItem">
-          <h3 className="subtitle subtitle_sm confirmation__title">
-            Shipping Information
-          </h3>
-          <div className="confirmation__detailsBlock">
-            <h4 className="subtitle subtitle_smallest confirmation__detailsSub">
-              Address
-            </h4>
-            <div className="confirmation__detailsWrap">
-              <p className="confirmation__infoText">Chloe Nicker</p>
-              <p className="confirmation__infoText">80 Greene St.</p>
-              <p className="confirmation__infoText">New York, NY 10012, US</p>
-              <p className="confirmation__infoText">chloenicker@gmail.ru</p>
-              <p className="confirmation__infoText">+ 1 212-531-3248</p>
-            </div>
-          </div>
-          <div className="confirmation__detailsBlock">
-            <h4 className="subtitle subtitle_smallest confirmation__detailsSub">Delivery Speed</h4>
-            <div className="confirmation__detailsWrap">
-              <p className="confirmation__infoText">
-                Arrives in 3-5 business days
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="confirmation__detailsItem">
-          <h3 className="subtitle subtitle_sm confirmation__title">
-            Payment Information
-          </h3>
-          <div className="confirmation__detailsBlock">
-            <h4 className="subtitle subtitle_smallest confirmation__detailsSub">Payment Method</h4>
-            <div className="confirmation__detailsWrap">
-              <p className="confirmation__infoText">5389 **** **** ****</p>
-            </div>
-          </div>
-        </div>
+        {info.map((item,index)=>{
+          return (
+            <OrderDetail info={item} key={index}/>
+          )
+        })}
       </div>
     </div>
   );
