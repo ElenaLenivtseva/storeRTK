@@ -73,7 +73,7 @@ const Cart = () => {
 
       <div className="cart__cardsWrap">
         {cartCards.map((item) => {
-          return <CartItem card={item} key={item.id} isForWishlist={false}/>;
+          return <CartItem card={item} key={item.id} purpose='base'/>;
         })}
       </div>
       <div className="cart__subtotal">

@@ -67,7 +67,7 @@ const Wishes = () => {
         <div className="subtitle wishes__title">Your wishlist</div>
         <div className="wishes__wrap">
           {cartCards.map((item) => {
-            return <CartItem card={item} key={item.id} isForWishlist={true}/>;
+            return <CartItem card={item} key={item.id} purpose='wishlist'/>;
           })}
         </div>
       </div>

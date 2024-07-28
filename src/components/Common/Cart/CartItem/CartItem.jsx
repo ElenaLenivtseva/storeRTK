@@ -2,7 +2,7 @@ import React from "react";
 import CartItemFeature from "./CartItemFeature";
 import "./CartItem.scss";
 
-const CartItem = ({ card, isForWishlist }) => {
+const CartItem = ({ card, purpose }) => {
   return (
     <div className="cartItem">
       <div className="cartItem__imgWrap">
@@ -14,13 +14,17 @@ const CartItem = ({ card, isForWishlist }) => {
           <CartItemFeature featureTitle="Price" card={card} />
           <CartItemFeature featureTitle="Color" card={card} />
           <CartItemFeature featureTitle="Size" card={card} />
-          {isForWishlist ? (
+          {purpose === "wishlist" ? (
             <></>
           ) : (
             <CartItemFeature featureTitle="Amount" card={card} />
           )}
         </div>
-        <p className="cartItem__remove">Remove</p>
+        {purpose === "orderConfirm" ? (
+          <></>
+        ) : (
+          <p className="cartItem__remove">Remove</p>
+        )}
       </div>
     </div>
   );

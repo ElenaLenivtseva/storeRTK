@@ -1,7 +1,9 @@
 import React from "react";
+import CartItem from "../../../../../Common/Cart/CartItem/CartItem";
+import "./Confirmation.scss";
 
 const order = {
-  id: "hgjhgj",
+  id: "SSPM112511277",
   date: "July 23, 2024",
   products: [
     {
@@ -41,16 +43,65 @@ const Confirmation = () => {
         Your Order Was Placed Successfully!
       </h3>
       <div className="confirmation__orderInfo">
-        <p className="confirmation__infoText">Order Number: <span></span></p>
-        <p className="confirmation__infoText">Order Date: <span></span></p>
+        <p className="confirmation__infoText">
+          Order Number: <span className="confirmation__span">{order.id}</span>
+        </p>
+        <p className="confirmation__infoText">
+          Order Date: <span className="confirmation__span">{order.date}</span>
+        </p>
       </div>
       <p className="confirmation__note">
         For complete overview o your order, please review the email we sent you.
       </p>
-      <div className="confirmation__orderedItems"></div>
-      <div className="confirmation__info">
-        <div className="confirmation__infoItem"></div>
-        <div className="confirmation__infoItem"></div>
+      <div className="confirmation__orderedItems">
+        <h3 className="subtitle subtitle_sm confirmation__title">
+          Ordered Items
+        </h3>
+        <div className="confirmation__orderedWrap">
+          {order.products.map((item) => {
+            return (
+              <CartItem card={item} key={item.id} purpose="orderConfirm" />
+            );
+          })}
+        </div>
+      </div>
+      <div className="confirmation__orderDetails">
+        <div className="confirmation__detailsItem">
+          <h3 className="subtitle subtitle_sm confirmation__title">
+            Shipping Information
+          </h3>
+          <div className="confirmation__detailsBlock">
+            <h4 className="subtitle subtitle_smallest confirmation__detailsSub">
+              Address
+            </h4>
+            <div className="confirmation__detailsWrap">
+              <p className="confirmation__infoText">Chloe Nicker</p>
+              <p className="confirmation__infoText">80 Greene St.</p>
+              <p className="confirmation__infoText">New York, NY 10012, US</p>
+              <p className="confirmation__infoText">chloenicker@gmail.ru</p>
+              <p className="confirmation__infoText">+ 1 212-531-3248</p>
+            </div>
+          </div>
+          <div className="confirmation__detailsBlock">
+            <h4 className="subtitle subtitle_smallest confirmation__detailsSub">Delivery Speed</h4>
+            <div className="confirmation__detailsWrap">
+              <p className="confirmation__infoText">
+                Arrives in 3-5 business days
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="confirmation__detailsItem">
+          <h3 className="subtitle subtitle_sm confirmation__title">
+            Payment Information
+          </h3>
+          <div className="confirmation__detailsBlock">
+            <h4 className="subtitle subtitle_smallest confirmation__detailsSub">Payment Method</h4>
+            <div className="confirmation__detailsWrap">
+              <p className="confirmation__infoText">5389 **** **** ****</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

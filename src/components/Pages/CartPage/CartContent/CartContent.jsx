@@ -8,7 +8,7 @@ import Confirmation from './Types/Confirmation/Confirmation'
 
 const CartContent = () => {
   return (
-    <div className="wrap">
+    <div className="wrap_sm">
       <div className="cartContent">
         <Confirmation/>
         <TotalCart />

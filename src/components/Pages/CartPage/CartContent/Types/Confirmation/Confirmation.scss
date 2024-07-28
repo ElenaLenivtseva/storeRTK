@@ -1,0 +1,44 @@
+@import '../../../../../../stylesCommon/common';
+
+.confirmation {
+    &__title {
+        margin-bottom: 3rem;
+    }
+
+    &__infoText {
+        margin-bottom: 0.7rem;
+        color: $grey;
+    }
+
+    &__span {
+        color: $black;
+    }
+
+    &__orderInfo {
+        margin-bottom: 2rem;
+    }
+
+    &__note {
+        font-weight: bold;
+        margin-bottom: 3rem;
+    }
+
+    &__orderedWrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    &__orderDetails {
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    &__detailsSub {
+        margin-bottom: 1.3rem;
+    }
+    &__detailsWrap {
+        margin-bottom: 2rem;
+    }
+}

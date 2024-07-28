@@ -4,7 +4,7 @@ import CartNavItem from "./CartNavItem";
 
 const CartNavigate = () => {
   return (
-    <div className="wrap">
+    <div className="wrap_sm">
       <div className="cartNav">
         <div className="cartNav__line"></div>
         <div className="cartNav__items">
