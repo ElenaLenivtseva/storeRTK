@@ -1,14 +1,14 @@
 import React from "react";
 import './OptionShipping.scss'
 
-const OptionShipping = ({ title, icon, duration, cost, active }) => {
+const OptionShipping = ({ info }) => {
   return (
-    <div className={`option ${active?'active':'unactive'}`}>
-      <div className="option__iconWrap">{icon}</div>
+    <div className={`option ${info.active?'active':'unactive'}`}>
+      <div className="option__iconWrap">{info.icon}</div>
       <div className="option__info">
-        <p className="option__infoText option__title">{title}</p>
-        <p className="option__infoText option__dur">{duration}</p>
-        <p className="option__infoText option__cost">{cost}</p>
+        <p className="option__infoText option__title">{info.title}</p>
+        <p className="option__infoText option__dur">{info.duration}</p>
+        <p className="option__infoText option__cost">{info.cost}</p>
       </div>
     </div>
   );
