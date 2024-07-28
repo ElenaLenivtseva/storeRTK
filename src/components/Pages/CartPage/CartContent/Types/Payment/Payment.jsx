@@ -1,5 +1,5 @@
 import React from "react";
-import Checkbox from "../Common/Checkbox/Checkbox";
+import Checkbox from "../../Common/Checkbox/Checkbox";
 import "./Payment.scss";
 
 const Payment = () => {

@@ -1,14 +1,15 @@
 import React from "react";
 import TotalCart from '../CartContent/Common/TotalCart/TotalCart'
-import Overview from "./Types/Overview";
+import Overview from "./Types/Overview/Overview";
 import "./CartContent.scss";
-import Payment from "./Types/Payment";
+import Payment from "./Types/Payment/Payment";
+import Shipping from "./Types/Shipping/Shipping";
 
 const CartContent = () => {
   return (
     <div className="wrap">
       <div className="cartContent">
-        <Payment/>
+        <Shipping/>
         <TotalCart />
       </div>
     </div>
