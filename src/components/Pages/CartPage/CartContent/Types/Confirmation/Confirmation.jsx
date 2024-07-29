@@ -94,7 +94,7 @@ const Confirmation = () => {
         <div className="confirmation__orderedWrap">
           {order.products.map((item) => {
             return (
-              <CartItem card={item} key={item.id} purpose="orderConfirm" />
+              <CartItem card={item} key={item.id} purpose="orderConfirm"/>
             );
           })}
         </div>
