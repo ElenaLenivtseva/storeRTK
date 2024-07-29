@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { closeIcon } from "../../icons";
 import "./Search.scss";
 import ProductCard from "../ProductCard/ProductCard";
@@ -70,6 +70,8 @@ const searchedProducts = [
 ];
 
 const Search = () => {
+  const [search, setSearch] = useState("");
+
   let result = true;
   return (
     <div className="seacrh">
@@ -77,9 +79,11 @@ const Search = () => {
         <div className="search__top">
           <p className="logo">AGAINST</p>
           <input
-            type="search"
             className="search__input"
+            type="search"
             placeholder="Look for a product"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
           {closeIcon}
         </div>

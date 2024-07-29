@@ -8,6 +8,7 @@ import PageFirst from "./components/Pages/homePage/TheFirstPage";
 import PageCategories from "./components/Pages/PageCategories/PageCategories";
 import PageWishlist from "./components/Pages/PageWishlist/PageWishlist";
 import CartPage from "./components/Pages/CartPage/CartPage";
+import Search from "./components/Common/Search/Search";
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<PageFirst />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/categories" element={<PageCategories />} />
           <Route path="/wishlist" element={<PageWishlist/>} />
           <Route path="/singleProduct" element={<SingleProduct />} />

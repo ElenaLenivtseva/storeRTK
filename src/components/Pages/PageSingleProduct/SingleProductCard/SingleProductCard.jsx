@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../../../Common/Button/Button";
 import Option from "./Option/Option";
 import ProductFeature from "./ProductFeature/ProductFeature";
 import { starIcon } from "../../../icons";
 import "./SingleProductCard.scss";
 
+const SingleProductCard = ({ productInfo, crutchForStars }) => {
+  const max = 10;
+  const min = 1;
+  const [amount, setAmount] = useState(1);
 
-
-const SingleProductCard = ({productInfo, crutchForStars}) => {
   return (
     <section className="singleProductCard">
       <div className="wrap singleProductCard__wrap">
@@ -78,17 +80,19 @@ const SingleProductCard = ({productInfo, crutchForStars}) => {
           </div>
 
           <div className="singleProductCard__amount">
-            <p className="singleProductCard__amountButton singleProductCard__minus">
+            <button
+              className="singleProductCard__amountButton singleProductCard__minus"
+              onClick={() => {if(amount>min){setAmount(amount - 1)}}}
+            >
               -
-            </p>
-            <input
-              className="singleProductCard__amountInput"
-              type="number"
-              min="1"
-            />
-            <p className="singleProductCard__amountButton singleProductCard__plus">
+            </button>
+            <div className="singleProductCard__amountInput">{amount}</div>
+            <button
+              className="singleProductCard__amountButton singleProductCard__plus"
+              onClick={() => {if(amount<max){setAmount(amount + 1)}}}
+            >
               +
-            </p>
+            </button>
           </div>
 
           <p className="singleProductCard__note">{productInfo.note}</p>

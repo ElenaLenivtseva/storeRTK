@@ -61,10 +61,21 @@ const Filter = ({ type }) => {
           ) : (
             <FilterType name="Clothes Type" array={typeTitles} />
           )}
-
-          <FilterType name="Body Type" array={bodyTypeTitles} />
-          <FilterType name="Appearance Type" array={appearanceTypeTitles} />
-          <FilterType name="Color Type" array={colorTypeTitles} />
+          {type === "body" ? (
+            ""
+          ) : (
+            <FilterType name="Body Type" array={bodyTypeTitles} />
+          )}
+          {type === "appearance" ? (
+            ""
+          ) : (
+            <FilterType name="Appearance Type" array={appearanceTypeTitles} />
+          )}
+          {type === "color" ? (
+            ""
+          ) : (
+            <FilterType name="Color Type" array={colorTypeTitles} />
+          )}
         </div>
         <Button className="button_black">Apply Changes</Button>
         <Button className="button_withoutOutline">Remove All</Button>
@@ -74,14 +85,14 @@ const Filter = ({ type }) => {
         <p className="filterBar__filterText">Filter</p>
       </div>
       <div className="filterBar__tabs">
-        {type === "clothes" ? (
-          ""
-        ) : (
+        {type === "collections" ? (
           <>
-            {titleOfCollections.map((title, index) => {
-              return <LinkComp key={index}>{title}</LinkComp>;
-            })}
-          </>
+          {titleOfCollections.map((title, index) => {
+            return <LinkComp key={index}>{title}</LinkComp>;
+          })}
+        </>
+        ) : (
+          ''
         )}
       </div>
       <div className="filterBar__filter">

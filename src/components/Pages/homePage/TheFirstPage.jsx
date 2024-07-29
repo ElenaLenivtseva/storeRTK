@@ -7,12 +7,11 @@ import MostWanted from './MostWanted/MostWanted'
 import Navbar from '../../Common/Navbar/Navbar'
 import ShopByCategory from './ShopByCategory/ShopByCategory'
 import TopCollection from './TopCollection/TopCollection'
-import Search from '../../Common/Search/Search'
+
 
 const TheFirstPage = () => {
   return (
     <div>
-      {/* <Search/> */}
       <Navbar/>
       <Cart/>
       <TopCollection/>
