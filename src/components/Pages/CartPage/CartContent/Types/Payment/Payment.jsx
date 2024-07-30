@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import BaseInput from "../../Common/BaseInput/BaseInput";
-import Checkbox from "../../Common/Checkbox/Checkbox";
+import BaseInput from "../../../../../Common/BaseInput/BaseInput";
+import Checkbox from "../../../../../Common/Checkbox/Checkbox";
 import "./Payment.scss";
 
 const initialValues = {
@@ -39,37 +39,52 @@ const Payment = () => {
       <h3 className="subtitle subtitle_sm payment__title">Payment Process</h3>
       <div className="payment__wrap">
         <BaseInput
-          info={{ type: "number", placeholder: "Card Number" }}
+          info={{
+            type: "number",
+            placeholder: "Card Number",
+            value: values.cardNumber,
+            name: "cardNumber",
+          }}
           onChange={handleInputChange}
-          value={values.cardNumber}
-          name="cardNumber"
         />
         <BaseInput
-          info={{ type: "text", placeholder: "Cardholder Name" }}
+          info={{
+            type: "text",
+            placeholder: "Cardholder Name",
+            value: values.cardholder,
+            name: "cardholder",
+          }}
           onChange={handleInputChange}
-          value={values.cardholder}
-          name="cardholder"
         />
 
         <div className="payment__wrap">
           <BaseInput
-            info={{ type: "text", placeholder: "Expiration Date" }}
+            info={{
+              type: "text",
+              placeholder: "Expiration Date",
+              value: values.expiration,
+              name: "expiration",
+            }}
             onChange={handleInputChange}
-            value={values.expiration}
-            name="expiration"
           />
           <BaseInput
-            info={{ type: "number", placeholder: "CVC" }}
+            info={{
+              type: "number",
+              placeholder: "CVC",
+              value: values.cvc,
+              name: "cvc",
+            }}
             onChange={handleInputChange}
-            value={values.cvc}
-            name="cvc"
           />
         </div>
         <BaseInput
-          info={{ type: "email", placeholder: "Email" }}
+          info={{
+            type: "email",
+            placeholder: "Email",
+            value: values.email,
+            name: "email",
+          }}
           onChange={handleInputChange}
-          value={values.email}
-          name="email"
         />
       </div>
       <div className="payment__checks">
@@ -77,7 +92,7 @@ const Payment = () => {
         <div className="payment__checks">
           <Checkbox
             label="Saved as preferred Credit Card"
-            isChecked={values.savedCard}
+            isChecked={values.saveCard}
             onChange={handleCheckSave}
           />
           <Checkbox

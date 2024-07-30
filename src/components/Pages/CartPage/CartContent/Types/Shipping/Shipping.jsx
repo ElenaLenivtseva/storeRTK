@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { homeIcon, storeIcon } from "../../../../../icons";
 import "./Shipping.scss";
 import OptionShipping from "./OptionShipping";
-import BaseInput from "../../Common/BaseInput/BaseInput";
-import Checkbox from "../../Common/Checkbox/Checkbox";
+import BaseInput from "../../../../../Common/BaseInput/BaseInput";
+import Checkbox from "../../../../../Common/Checkbox/Checkbox";
 
 const options = [
   {
@@ -80,7 +80,7 @@ const Shipping = () => {
         </h4>
         <div className="shipping__deliveryWrap">
           {deliveryInputs.map((item, index) => {
-            return <BaseInput key={index} info={item} value={item.value} name={item.name}  onChange={handleInputChange}/>;
+            return <BaseInput key={index} info={item} onChange={handleInputChange}/>;
           })}
         </div>
         <p className="shipping__deliveryNote">

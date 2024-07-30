@@ -1,15 +1,15 @@
 import React from "react";
 import "./BaseInput.scss";
 
-const BaseInput = ({ info, onChange, value, name }) => {
+const BaseInput = ({ info, onChange}) => {
   return (
     <input
       className="input"
       type={info.type}
       placeholder={info.placeholder}
       onChange={onChange}
-      value={value}
-      name={name}
+      value={info.value}
+      name={info.name}
     />
   );
 };

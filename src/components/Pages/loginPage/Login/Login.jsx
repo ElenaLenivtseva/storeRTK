@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import BaseInput from "../../../Common/BaseInput/BaseInput";
 import Button from "../../../Common/Button/Button";
 import LinkComp from "../../../Common/LinkComp/LinkComp";
 import "./Login.scss";
@@ -10,7 +11,11 @@ const initialValues = {
 
 const Login = () => {
   const [values, setValues] = useState(initialValues);
-
+  const loginInputs = [
+    { type: "email", placeholder: "Enter your email", value: values.email, name:'email' },
+    { type: "pasword", placeholder: "Make up your password", value: values.password, name:'password' },
+    
+  ];
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setValues({
@@ -25,7 +30,13 @@ const Login = () => {
         <h2 className="subtitle login__title">Create your account</h2>
         <p className="login__text">Fashion Elegance With Exclusive Access</p>
         <form className="login__form">
-          <input
+          {loginInputs.map((item,index)=>{
+            return(
+              <BaseInput key={index} info={item} onChange={handleInputChange}/>
+            )
+          })}
+         
+          {/* <input
             className="login__input login__formEmail"
             type="email"
             placeholder="Enter your email"
@@ -40,7 +51,7 @@ const Login = () => {
             name='password'
             value={values.password} 
             onChange={handleInputChange}
-          />
+          /> */}
           <Button className="button button_totalBlack">Get started</Button>
         </form>
         <p className="login__variant">
