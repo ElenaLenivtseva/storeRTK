@@ -9,12 +9,12 @@ const initialValues = {
   expiration: "",
   cvc: "",
   email: "",
-  savedCard: false,
+  saveCard: false,
   policy: false,
 };
 const Payment = () => {
   const [values, setValues] = useState(initialValues);
-  console.log(values)
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setValues({
@@ -25,7 +25,7 @@ const Payment = () => {
   const handleCheckSave = () => {
     setValues({
       ...values,
-      savedCard: !values.savedCard,
+      saveCard: !values.saveCard,
     });
   };
   const handleCheckPolicy = () => {

@@ -10,7 +10,7 @@ const CartContent = () => {
   return (
     <div className="wrap_sm">
       <div className="cartContent">
-        <Payment/>
+        <Shipping/>
         <TotalCart />
       </div>
     </div>
