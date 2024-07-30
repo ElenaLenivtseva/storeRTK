@@ -29,12 +29,16 @@ const Login = () => {
             className="login__input login__formEmail"
             type="email"
             placeholder="Enter your email"
+            name='email'
+            value={values.email} 
             onChange={handleInputChange}
           />
           <input
             className="login__input login__formPassword"
             type="password"
             placeholder="Make up your password"
+            name='password'
+            value={values.password} 
             onChange={handleInputChange}
           />
           <Button className="button button_totalBlack">Get started</Button>
