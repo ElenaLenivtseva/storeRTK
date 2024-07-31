@@ -11,7 +11,9 @@ const productInfo = {
   id: 1,
   title: "Noir V Neck Wrap Blouse",
   img: [
-    "https://cdn.shopify.com/s/files/1/0417/4987/2806/files/SS24_DRESS_01_BLACK_01.jpg?v=1706566862&width=768&crop=center",
+    "https://cdn.shopify.com/s/files/1/0417/4987/2806/files/PF24_BLOUSE_03_BLUE_01_f7fa1cf2-a5ad-4e4f-998b-9491040f23d7.jpg?v=1713974466&width=768&crop=center",
+    "https://cdn.shopify.com/s/files/1/0417/4987/2806/files/PF24_BLOUSE_03_BLUE_02.jpg?v=1713974468&width=768&crop=center",
+    "https://cdn.shopify.com/s/files/1/0417/4987/2806/files/PF24_BLOUSE_03_BLUE_03.jpg?v=1713974471&width=768&crop=center",
   ],
   price: 420,
   materials: ["Cotton 80%", "Poliester 15%", "Elastan 5%"],
@@ -61,8 +63,7 @@ const productInfo = {
       size: "S",
       color: "Noir",
       title: "So perect",
-      comment:
-        "Enchanting evenings call for this dress",
+      comment: "Enchanting evenings call for this dress",
     },
   ],
 };

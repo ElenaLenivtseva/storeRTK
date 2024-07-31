@@ -6,21 +6,25 @@ import { starIcon } from "../../../icons";
 import "./SingleProductCard.scss";
 
 const SingleProductCard = ({ productInfo, crutchForStars }) => {
+  const [amount, setAmount] = useState(1);
   const max = 10;
   const min = 1;
-  const [amount, setAmount] = useState(1);
-
+ 
   return (
     <section className="singleProductCard">
       <div className="wrap singleProductCard__wrap">
         <div className="singleProductCard__slider">
-          <img
-            className="singleProductCard__slide"
-            src={productInfo.img[0]}
-            alt="dress"
-          />
+          {productInfo.img.map((item, index) => {
+            return (
+              <img
+                className="singleProductCard__img"
+                src={item}
+                alt={index}
+                key={index}
+              />
+            );
+          })}
         </div>
-
         <div className="singleProductCard__info">
           <div className="singleProductCard__top">
             <div className="singleProductCard__header">
@@ -82,14 +86,22 @@ const SingleProductCard = ({ productInfo, crutchForStars }) => {
           <div className="singleProductCard__amount">
             <button
               className="singleProductCard__amountButton singleProductCard__minus"
-              onClick={() => {if(amount>min){setAmount(amount - 1)}}}
+              onClick={() => {
+                if (amount > min) {
+                  setAmount(amount - 1);
+                }
+              }}
             >
               -
             </button>
             <div className="singleProductCard__amountInput">{amount}</div>
             <button
               className="singleProductCard__amountButton singleProductCard__plus"
-              onClick={() => {if(amount<max){setAmount(amount + 1)}}}
+              onClick={() => {
+                if (amount < max) {
+                  setAmount(amount + 1);
+                }
+              }}
             >
               +
             </button>

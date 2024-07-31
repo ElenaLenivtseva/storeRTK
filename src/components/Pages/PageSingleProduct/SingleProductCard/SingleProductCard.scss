@@ -5,6 +5,7 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-gap: 2rem;
+        min-height: 100vh;
     }
 
     &__top {
@@ -140,5 +141,22 @@
         border: none;
         outline: none;
         font-size: 1rem;
+    }
+
+    &__slider {
+        height: 60rem;
+
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+
+    &__img {
+        height: 60rem;
     }
 }
