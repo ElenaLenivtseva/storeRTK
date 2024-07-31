@@ -8,13 +8,13 @@ import Navbar from '../../Common/Navbar/Navbar'
 import ShopByCategory from './ShopByCategory/ShopByCategory'
 import TopCollection from './TopCollection/TopCollection'
 
-
 const TheFirstPage = () => {
   return (
     <div>
       <Navbar/>
       <Cart/>
       <TopCollection/>
+      
       <MostWanted/>
       <ShopByCategory/>
       <LastCollections/>
