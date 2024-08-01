@@ -1,12 +1,14 @@
 import React from 'react'
 import './AccountMenuItem.scss'
+import { Link } from 'react-router-dom'
 
 const AccountMenuItem = ({item}) => {
   return (
-    <li className='accountMenuItem'>
-      {item.svg}
-      {item.title}
-    </li>
+    <Link to={`:${item.type}`}><li className='accountMenuItem'>
+    {item.svg}
+    {item.title}
+  </li></Link>
+    
   )
 }
 

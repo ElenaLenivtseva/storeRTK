@@ -5,7 +5,6 @@ import { openArrowIcon } from "../../icons";
 import "./NavbarMenuItem.scss";
 
 const NavbarMenuItem = ({ info }) => {
-  console.log(info)
   const [isOpen, setOpen] = useState(false);
   const menuRef = useRef(null);
   useClickOutside(menuRef, () => {

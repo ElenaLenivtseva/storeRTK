@@ -4,11 +4,11 @@ import { accountMenuIcon, ordersMenuIcon, walletMenuIcon, addressMenuItem, outMe
 import './AccountMenu.scss'
 
 const menuItems = [
-{title: 'My Personal Information', svg: accountMenuIcon},
-{title: 'My Orders', svg: ordersMenuIcon},
-{title: 'My Wallet', svg: walletMenuIcon},
-{title: 'My Shipping Address', svg: addressMenuItem},
-{title: 'Sign Out', svg: outMenuItem},
+{title: 'My Personal Information', svg: accountMenuIcon, type:'personalInfo'},
+{title: 'My Orders', svg: ordersMenuIcon, type:'orders'},
+{title: 'My Wallet', svg: walletMenuIcon, type:'wallet'},
+{title: 'My Shipping Address', svg: addressMenuItem, type:'address'},
+{title: 'Sign Out', svg: outMenuItem, type:'/exit'},
 ]
 const AccountMenu = () => {
   return (

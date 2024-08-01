@@ -58,13 +58,13 @@ const Navbar = () => {
         </div>
         <div className="navbar__actionsWrap">
           <div className="navbar__action">
-            <Link to="/">{searchIcon}</Link>
+            {searchIcon}
           </div>
           <div className="navbar__action">
             <Link to="/account"> {accountIcon}</Link>
           </div>
           <div className="navbar__action">
-            <Link to="/cart"> {cartIcon}</Link>
+             {cartIcon}
           </div>
           <div className="navbar__action">
             <Link to="/wishlist"> {heartNavbarIcon}</Link>

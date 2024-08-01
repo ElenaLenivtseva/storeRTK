@@ -24,8 +24,12 @@ function App() {
           <Route path="/wishlist" element={<PageWishlist/>} />
           <Route path="/singleProduct" element={<SingleProduct />} />
           <Route path="/collections/" element={<ShopPageCollections />} />
-          <Route path="/account" element={<PageAccount/>} />
+          {/* <Route path="/account" element={<PageAccount/>} /> */}
           <Route path="/cart" element={<CartPage/>} />
+          <Route path="/account" element={<PageAccount/>} >
+                    <Route index element={<PageAccount />} />
+                    <Route path=":id" element={<PageAccount />} />
+                </Route>
         </Routes>
       </BrowserRouter>
     </div>
