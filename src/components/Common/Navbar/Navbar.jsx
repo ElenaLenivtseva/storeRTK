@@ -1,9 +1,43 @@
 import React from "react";
 import NavbarMenuItem from "../NavbarMenuItem/NavbarMenuItem";
-import { accountIcon, cartIcon, heartNavbarIcon, searchIcon } from "../../icons";
+import {
+  accountIcon,
+  cartIcon,
+  heartNavbarIcon,
+  searchIcon,
+} from "../../icons";
 import "./Navbar.scss";
+import { Link } from "react-router-dom";
 
-const menuItems = ["Clothes", "Color Type", "Body Type", "Appearance"];
+const menuItems = [
+  {
+    title: "Clothes",
+    links: ["/dresses", "/shirts", "/skirts"],
+    listItems: ["dresses", "shirts", "skirts"],
+  },
+  {
+    title: "Color Type",
+    links: ["/collections", "/collections", "/collections", "/collections"],
+    listItems: ["winter", "spring", "summer", "autumn"],
+  },
+  {
+    title: "Body Type",
+    links: [
+      "/collections",
+      "/collections",
+      "/collections",
+      "/collections",
+      "/collections",
+      "/collections",
+    ],
+    listItems: ["pear", "apple", "hourglass", "rectangle", "inverted Triangle"],
+  },
+  {
+    title: "Appearance",
+    links: ["/collections", "/collections", "/collections", "/collections"],
+    listItems: ["gamin", "romantic", "dramatic", "natural"],
+  },
+];
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -13,18 +47,28 @@ const Navbar = () => {
         </p>
       </div>
       <div className="navbar__bottom">
-        <p className="logo">AGAINST</p>
+        <Link to="/">
+          <p className="logo">AGAINST</p>
+        </Link>
+
         <div className="navbar__menu">
           {menuItems.map((item, index) => {
-            return <NavbarMenuItem key={index} text={item} />;
+            return <NavbarMenuItem key={index} info={item} />;
           })}
         </div>
         <div className="navbar__actionsWrap">
-          <div className="navbar__action">{searchIcon}</div> 
-          <div className="navbar__action">{accountIcon}</div> 
-          <div className="navbar__action">{cartIcon}</div> 
-          <div className="navbar__action">{heartNavbarIcon}</div> 
-          
+          <div className="navbar__action">
+            <Link to="/">{searchIcon}</Link>
+          </div>
+          <div className="navbar__action">
+            <Link to="/account"> {accountIcon}</Link>
+          </div>
+          <div className="navbar__action">
+            <Link to="/cart"> {cartIcon}</Link>
+          </div>
+          <div className="navbar__action">
+            <Link to="/wishlist"> {heartNavbarIcon}</Link>
+          </div>
         </div>
       </div>
     </div>

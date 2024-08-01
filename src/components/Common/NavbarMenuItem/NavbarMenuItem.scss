@@ -1,0 +1,48 @@
+@import '../../../stylesCommon/common';
+.menu {
+    
+    display: flex;
+    flex-direction: column;
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+    &__list {
+        position: absolute;
+        background: $white;
+        top: 100%;
+        padding: 1rem 1rem 0 1rem;
+        border: 0.1rem solid $black;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-5px);
+        transition: 0.3s;
+    }
+    &__list.active{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    &__listLink {
+        li {
+            margin-bottom: 1rem;
+        }
+    }
+    &__listItem {
+        text-transform: lowercase;
+        transition: 0.5s ease-in;
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+       
+    }
+}

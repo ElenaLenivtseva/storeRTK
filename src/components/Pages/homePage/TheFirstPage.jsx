@@ -12,7 +12,7 @@ const TheFirstPage = () => {
   return (
     <div>
       <Navbar/>
-      <Cart/>
+      {/* <Cart/> */}
       <TopCollection/>
       
       <MostWanted/>

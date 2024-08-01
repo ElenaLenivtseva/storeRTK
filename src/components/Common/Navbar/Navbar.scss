@@ -1,7 +1,14 @@
 @import '../../../stylesCommon/_common';
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+  
+    width: 100%;
     &__top {
+       
         display: flex;
         justify-content: center;
         align-items: center;
@@ -22,17 +29,10 @@
 
     &__menu {
         display: flex;
+        gap: 0.5rem;
     }
 
-    &__menuItem {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        &:not(:last-child) {
-            margin-right: 1rem;
-        }
-    }
+    
 
     &__arrow {
         margin-left: 0.3rem;
